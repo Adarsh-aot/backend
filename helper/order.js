@@ -24,6 +24,13 @@ const getorder = (req , res) => {
     res.json(todo)
 }
 
+const myorder = (req , res) => {
+    const id = req.decode.id
+    const todo = order.filter((item) => item.by == id)
+    res.json(todo)
+}
+
+
 
 const cancelorder = (req , res) => {
     const id = req.params.id
@@ -31,8 +38,10 @@ const cancelorder = (req , res) => {
     res.json(order)
 }
 
+
 module.exports = {
     addorder ,
     getorder ,
-    cancelorder
+    cancelorder ,
+    myorder
 }
