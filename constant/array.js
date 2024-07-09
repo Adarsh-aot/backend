@@ -13,8 +13,12 @@ let todo = [
 
 
 let order = [
-    {'id' : 1 , 'name' : 'order 1' , by : 1 , post : 2  },
+    {'id' : 1 , 'name' : 'order 1' , by : 2 , post : 2  },
 ]
+
+
+
+
 module.exports = {
     data ,
     todo , 
