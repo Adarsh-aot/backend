@@ -1,9 +1,18 @@
 let { order  } = require("../constant/array");
+const {v4 : uuidv4} = require('uuid')
+
+
+
+
+function extractNumbersFromUUID(uuid) {
+    return uuid.replace(/\D/g, '');
+  }
+
 
 
 const addorder  = (req , res) => {
     const {name , by} = req.body
-    const id = 59895 
+    const id = extractNumbersFromUUID(uuidv4());
     const post = req.decode.id 
     order.push({id , name , by , post})
     res.json(order)
