@@ -12,8 +12,9 @@ const login = (req , res) => {
         res.json({status : 'failed'})
     }else{
         const id = todo[index].id
+        const type = todo[index].type
         var token = jwt.sign({ id  , email}, 'shhhhh');
-        res.json({token})
+        res.json({type , token})
     }
 }
 

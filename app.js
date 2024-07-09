@@ -15,7 +15,7 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
 
-
+app.use('/Admin', require('./routes/Admin_route'))
 app.use('/registration', require('./routes/registration_route'))
 app.use('/product', require('./routes/product_route'))
 

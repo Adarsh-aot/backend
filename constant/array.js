@@ -7,8 +7,8 @@ let data  = [
 
 
 let todo = [
-    {'id' : 1 , 'email' : 'admin' , 'password' : 'admin'},
-    {'id' : 2 , 'email' : 'email' , 'password' : 'password'}
+    {'id' : 1 , 'email' : 'admin' , 'password' : 'admin' , type : 'admin'},
+    {'id' : 2 , 'email' : 'email' , 'password' : 'password' , type: 'user'}
 ]
 module.exports = {
     data ,
