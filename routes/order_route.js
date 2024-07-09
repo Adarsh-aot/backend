@@ -7,6 +7,7 @@ const { jwt_token_validatotion } = require('../middleware/jwt_token')
 
 
 router.post('',jwt_token_validatotion,order.addorder)
+router.get('',jwt_token_validatotion,order.getorder)
 
 
 module.exports = router

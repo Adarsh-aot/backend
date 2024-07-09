@@ -9,7 +9,14 @@ const addorder  = (req , res) => {
     res.json(order)
 }
 
+const getorder = (req , res) => {
+    const id = req.decode.id
+    const todo = order.filter((item) => item.post == id)
+    res.json(todo)
+}
+
 
 module.exports = {
-    addorder
+    addorder ,
+    getorder
 }
