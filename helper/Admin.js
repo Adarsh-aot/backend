@@ -9,12 +9,10 @@ const getdata = (req, res) => {
     const id = req.decode.id;
 
     // Ensure the ID exists in the todo array
-    if (!todo[id]) {
-        return res.status(404).json({ error: 'Item not found' });
-    }
+    
 
-    const type = todo.findIndex((item) => item.id == id);
-    let admindet = todo.filter((item) => item.type != todo[type].type);
+    // const type = todo.findIndex((item) => item.id == id);
+    let admindet = todo.filter((item) => item.type != 'admin');
     res.json(admindet);
 }
 
