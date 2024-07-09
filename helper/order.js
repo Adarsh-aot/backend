@@ -16,7 +16,14 @@ const getorder = (req , res) => {
 }
 
 
+const cancelorder = (req , res) => {
+    const id = req.params.id
+    order = order.filter((item) => item.id != id)
+    res.json(order)
+}
+
 module.exports = {
     addorder ,
-    getorder
+    getorder ,
+    cancelorder
 }
