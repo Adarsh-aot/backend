@@ -7,5 +7,6 @@ const { jwt_token_validatotion } = require('../middleware/jwt_token')
 
 
 router.get('/',jwt_token_validatotion,admin.getdata)
+router.delete('/:id',admin.deletedata)
 
 module.exports = router

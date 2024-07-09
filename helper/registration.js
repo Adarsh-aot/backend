@@ -18,16 +18,16 @@ const login = (req , res) => {
     }
 }
 
-const register = (req , res) => {
-    const {email , password} = req.body
-    const index = todo.findIndex((item) => item.email == email && item.password == password)
-    if( index == -1 ){
-        const id = extractNumbersFromUUID(uuidv4())
-        todo.push({id , email , password})
-        var token = jwt.sign({ id  , email}, 'shhhhh');
-        res.json({token})
-    }else{
-        res.json({status : 'failed'})
+function register(req, res) {
+    const { email, password } = req.body;
+    const index = todo.findIndex((item) => item.email == email && item.password == password);
+    if (index == -1) {
+        const id = extractNumbersFromUUID(uuidv4());
+        todo.push({ id, email, password , type : 'user' });
+        var token = jwt.sign({ id, email }, 'shhhhh');
+        res.json({ token });
+    } else {
+        res.json({ status: 'failed' });
     }
 }
 
