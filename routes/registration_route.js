@@ -6,5 +6,6 @@ const registration = require('../helper/registration')
 
 
 router.post('/',registration.login)
+router.post('/register',registration.register)
 
 module.exports = router
