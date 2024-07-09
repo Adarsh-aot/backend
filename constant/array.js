@@ -10,7 +10,13 @@ let todo = [
     {'id' : 1 , 'email' : 'admin' , 'password' : 'admin' , type : 'admin'},
     {'id' : 2 , 'email' : 'email' , 'password' : 'password' , type: 'user'}
 ]
+
+
+let order = [
+    {'id' : 1 , 'name' : 'order 1' , by : 1 , post : 2  },
+]
 module.exports = {
     data ,
-    todo
+    todo , 
+    order
 }

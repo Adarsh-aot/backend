@@ -29,9 +29,10 @@ const myproduct = (req , res) => {
     const id = req.decode.id
     const todo = data.filter((item) => item.data == id)
     console.log(todo)
-    res.json(todo)
-
+    res.json(todo)  
 }
+
+
 module.exports = {
     getdata , 
     getdatabyid ,

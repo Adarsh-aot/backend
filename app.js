@@ -15,6 +15,8 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
 
+
+app.use('/order', require('./routes/order_route'))
 app.use('/Admin', require('./routes/Admin_route'))
 app.use('/registration', require('./routes/registration_route'))
 app.use('/product', require('./routes/product_route'))
